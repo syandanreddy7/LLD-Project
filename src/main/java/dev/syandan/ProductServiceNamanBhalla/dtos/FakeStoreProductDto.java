@@ -1,6 +1,5 @@
 package dev.syandan.ProductServiceNamanBhalla.dtos;
 
-import dev.syandan.ProductServiceNamanBhalla.models.Category;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class ProductDto {
+public class FakeStoreProductDto {
 
     private Long id;
     private String title;

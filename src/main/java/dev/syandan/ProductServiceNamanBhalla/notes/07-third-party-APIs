@@ -1,0 +1,19 @@
+
+**** 1. Changing HTTP Status Codes ****
+Changing the response codes for the ResponseEntity. Now by default twe can observe in the
+postman we get the Https status code 200 OK upon successful request to the server,
+
+However Spring provides us with the flexibility to change these status codes.
+This is done as below in the respective controller class:
+
+ResponseEntity<Product> response = new ResponseEntity(
+                                       productService.getSingleProduct(),
+                                       HttpStatus.NOT_FOUND);
+return response;
+
+**** 2. Headers in the Request Body ****
+
+**** 3. Jackson Library ****
+The dispatcher server makes use of Jackson Library to convert the JSON to JAVA object
+and vice versa.
+

@@ -1,17 +1,22 @@
 package dev.syandan.ProductServiceNamanBhalla.services;
 
 import dev.syandan.ProductServiceNamanBhalla.dtos.ProductDto;
+import dev.syandan.ProductServiceNamanBhalla.models.Category;
+import dev.syandan.ProductServiceNamanBhalla.models.Product;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 public interface ProductService {
-    String getAllProducts();
+    List<Product> getAllProducts();
 
-    String getSingleProduct(Long productId);
+    Product getSingleProduct(Long productId);
 
-    String addProduct(ProductDto productDto);
+    Product addProduct(ProductDto product);
 
-    String updateProduct(Long productId);
+    Product updateProduct(Long productId, Product product);
 
-    String addProduct(Long productId );
+    Product replaceProduct(Long productId, Product product);
+    boolean addProduct(Long productId );
 
 }
